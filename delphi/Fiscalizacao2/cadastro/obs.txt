@@ -1,0 +1,10 @@
+Solicitação:
+
+id - 68 em diante...
+
+
+
+
+Solicitação - Falta fazer gravar idusuario.
+
+Denúncia - Falta fazer gravar idfiscal. (que também depende do usuário)

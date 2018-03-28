@@ -1,0 +1,9 @@
+ // 2º Jogador //
+if (getkeystate(37) and $8000)<> 0 then Aviaoe.left:=Aviaoe.left-5;
+//Se a tecla 'Frente' for pressionada então o avião(2) vai para frente
+if (getkeystate(39) and $8000)<> 0 then Aviaoe.left:=Aviaoe.left+5;
+//Se a tecla 'Trás' for pressionada então o avião(2) vai para trás
+if (getkeystate(38) and $8000)<> 0 then Aviaoe.top:=Aviaoe.top-5;
+//Se a tecla 'Cima' for pressionada então o avião(2) vai para cima
+if (getkeystate(40) and $8000)<> 0 then Aviaoe.top:=Aviaoe.top+5;
+//Se a tecla 'Baixo' for pressionada então o avião(2) vai para baixo

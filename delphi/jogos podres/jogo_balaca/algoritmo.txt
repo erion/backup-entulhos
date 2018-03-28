@@ -1,0 +1,30 @@
+  if a >= 600 then
+    begin
+      a:= a - 10;
+      movimento:= a;
+    end
+  else
+    begin
+      if a <= 0 then
+        begin
+          a:= a + 10;
+          movimento:= a;
+        end
+      else
+        begin
+          while b = 0 do
+            begin
+              b:= random(2);
+              case b of
+              1:begin
+                a:= a + 10;
+                movimento:= a;
+                end;
+              2:begin
+                a:= a - 10;
+                movimento := a;
+                end;
+              end;
+            end;
+        end;
+    end;

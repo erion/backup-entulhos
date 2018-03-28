@@ -1,0 +1,38 @@
+Cadastro de Clientes - >
+  Lookup´s
+
+cadastro de fornecedor - >
+  CPF ? 
+  Fones? 
+  Serviços Prestados?
+
+Cadastro de Guias ->
+  Lookup´s
+
+Cadastro Hotel ->
+  Lookup
+
+Cadastro Motorista ->
+  Fones
+
+Notas Fiscais ->
+  Lookup´s, campos somente leitura
+
+Pedidos ->
+  Lookup´s, campos somente leitura
+
+Room List ->
+  Caption Form?, Resumo?
+
+Controle de Ônibus ->
+  Lookup, Espaço vazio do formulário
+
+Lista de Passageiros -> 
+  Lookup, 
+
+Mapa Lugares ->
+  Tirar o memo e ver o que pôr no lugar
+
+Pedido Seguro -> 
+  Tirei um campo do grid, o que era?
+

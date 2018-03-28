@@ -1,0 +1,177 @@
+Como criar um form completo com componentes visuais dinamicamente
+
+Você pode criar qualquer componente do delphi de forma dinâmica, incluindo todos os componentes visuais (buttons, textedits, maskedits, labels...). Para que serviria isso? Para muitas coisas, uma delas é que você pode criar qualquer controle em tempo de execução e depois de utiliza-lo descarrega-lo da memória...
+
+ 
+
+Exemplo:Como Criar um botão quando o mouse for pressionado e associar eventos nele....
+
+ 
+
+É só colar dentro da unit do form....
+
+ 
+
+**início do copia e cola**
+
+ 
+
+unit Unit1;
+
+ 
+
+interface
+
+ 
+
+uses
+
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs;
+
+ 
+
+type
+
+  TForm1 = class(TForm)
+
+  procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
+
+  Shift: TShiftState; X, Y: Integer);
+
+  procedure FormCreate(Sender: TObject);
+
+  private
+
+  { Private declarations }
+
+  public
+
+  { Public declarations }
+
+  end;
+
+ 
+
+var
+
+  Form1: TForm1;
+
+  contador:integer;
+
+ 
+
+implementation
+
+ 
+
+{$R *.DFM}
+
+ 
+
+uses stdctrls;
+
+ 
+
+procedure TForm1.FormMouseDown(Sender: TObject; Button: TMouseButton;
+
+  Shift: TShiftState; X, Y: Integer);
+
+var b:tbutton;
+
+begin
+
+  b:=Tbutton.create(self);
+
+  b.visible:=false;
+
+  b.parent:=self;
+
+  b.left:=x;
+
+  b.top:=y;
+
+  b.name:=Btn+inttostr(contador);
+
+  b.Caption:=Clique-me;
+
+  inc(contador);
+
+  b.visible:=true;
+
+end;
+
+ 
+
+procedure TForm1.FormCreate(Sender: TObject);
+
+begin
+
+contador:=1;
+
+end;
+
+end.
+
+ 
+
+**fim do copia e cola**
+
+ 
+
+Se quiser associar um evento ao botão é só copiar os procedimento clicou e alterar o procedimento mouse down para o que segue....
+
+ 
+
+**início do copia e cola**
+
+ 
+
+procedure TForm1.FormMouseDown(Sender: TObject; Button: TMouseButton;
+
+  Shift: TShiftState; X, Y: Integer);
+
+var b:tbutton;
+
+begin
+
+  b:=Tbutton.create(self);
+
+  b.visible:=false;
+
+  b.parent:=self;
+
+  b.left:=x;
+
+  b.top:=y;
+
+  b.name:=Btn+inttostr(contador);
+
+  b.Caption:=Clique-me;
+
+  inc(contador);
+
+  b.visible:=true;
+
+  b.onclick:=clicou;
+
+end;
+
+ 
+
+procedure TForm1.clicou(sender: TObject);
+
+begin
+
+ShowMessage(Clicou!!!);
+
+end;
+
+ 
+
+**fim do copia e cola**
+
+ 
+
+Com isto concluímos que podemos criar qualquer coisa em tempo de execução com economia de memória. Basta para isso dar o create da classe....
+
+Para apagar o botao devemos ter cuidado para não apagar dentro do evento visto que gerara uma exceção. Existe duas formas de se contornar isto, a primeira é fornecendo um atraso. 

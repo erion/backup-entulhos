@@ -1,0 +1,41 @@
+ARRUMAR FUNCTION TESTA_VEZ
+
+  type jogo = record
+         posicao: array[1..2] of integer;
+         imagem: TImage;
+       end;
+  type peca = record
+         pecap: array[1..16] of jogo;
+         pecab: array[1..16] of jogo;
+       end;
+
+type jogo:
+
+armazena posicao (posicao) da imagem (imagem) no tabuleiro;
+posicao[1]: coordenada x
+posicao[2]: coordenada y
+
+
+type peca:
+
+pecap:
+1- torre
+2- cavalo
+3- bispo
+4- rainha
+5- rei
+6- bispo
+7- cavalo
+8- torre
+9 a 16 - peão
+
+pecab:
+1- torre
+2- cavalo
+3- bispo
+4- rainha
+5- rei
+6- bispo
+7- cavalo
+8- torre
+9 a 16 - peão

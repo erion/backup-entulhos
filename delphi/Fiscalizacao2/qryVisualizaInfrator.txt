@@ -1,0 +1,56 @@
+select c.nome_cidadao as infrator
+,      cd1.numero_documento as cpf
+,      cd2.numero_documento as cgc
+,      d.iddenuncia
+,      s1.descricao as situacaodenuncia
+,      u1.nome as fiscaldenuncia
+,      d.datahoradenuncia
+,      d.descricao
+,      d.procedimentos
+,      n.codnotificacao
+,      s2.descricao as situacaonotificacao
+,      u2.nome as fiscalnotificacao
+,      n.datahoranotificacao
+,      o.descricao as ocorrencia
+,      bl.descricao as baselegal
+,      a.codautoinfracao
+,      s3.descricao as situacaoautoinfracao
+,      u3.nome as fiscalautoinfracao
+,      a.datahorainfracao
+,      a.descricao as descautoinfracao
+,      a.exigencia
+,      a.valor
+,      a.unidade
+,      r.codapreensao
+,      u4.nome as fiscalregistroapreensao
+,      r.datahoraapreensao
+,      r.numdestino
+,      r.complementodestino
+,      b.nome as bairroregistroapreensao
+,      m.nome_municipio
+,      l.descricao as logradouro
+from   fis_denuncia d                               left join fis_notificacao n on
+          n.iddenuncia      = d.iddenuncia          left join fis_situacao s2 on
+          s2.idsituacao     = n.idsituacao          left join fis_usuario u2 on
+          u2.idusuario      = n.idfiscal            left join fis_ocorrencia o on
+          o.idocorrencia    = n.idocorrencia        left join ger_base_legal bl on
+          bl.cod_base_legal = n.codbaselegal        left join fis_autoinfracao a on
+          a.codnotificacao  = n.codnotificacao      left join fis_situacao s3 on
+          s3.idsituacao     = a.idsituacao          left join fis_usuario u3 on
+          u3.idusuario      = a.idfiscal            left join fis_registroapreensao r on
+          r.codnotificacao  = n.codnotificacao      left join ger_logradouro l on 
+          l.cod_logradouro  = r.idlogradourodestino left join fis_usuario u4 on
+          u4.idusuario      = a.idfiscal            left join ger_bairro b on
+          b.cod_bairro      = r.idbairrodestino     left join ger_municipio m on
+          m.cod_municipio   = r.idcidadedestino 
+,      ger_cidadao c                        left join ger_cidadao_documento cd1 on
+          cd1.cod_cidadao   = c.cod_cidadao 
+          and cd1.cod_tipo_documento = 2    left join ger_cidadao_documento cd2 on
+          cd2.cod_cidadao   = c.cod_cidadao 
+          and cd2.cod_tipo_documento = 3 
+,      fis_situacao s1
+,      fis_usuario u1
+where  c.cod_cidadao     = 21
+and    d.idinfrator      = c.cod_cidadao
+and    s1.idsituacao     = d.idsituacao
+and    u1.idusuario      = d.idfiscal

@@ -1,0 +1,12 @@
+TPokemon
+  codigo
+  tipo: TTipoPok
+  tamanho
+end; 
+
+
+TTipoPok
+  codigo
+  nome
+  forca //efetivo contra
+end;

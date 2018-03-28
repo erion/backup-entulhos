@@ -1,0 +1,51 @@
+select d.iddenuncia,ci.codinfrator, ci.infrator, ci.cpf, ci.cnpj 
+,d.datahoradenuncia, d.datahoraatendimento, d.assunto 
+,d.descricao, d.procedimentos, s.descricao as situacao 
+,cr.requerente, tr.descricao as tiporequerente, n.codNotificacao 
+,n.dataHoraNotificacao, o.descricao as ocorrencia, a.codAutoinfracao 
+,a.dataHoraInfracao, a.descricao as descricaoInfracao 
+,a.exigencia as exigenciaInfracao, r.codApreensao, r.dataHoraapreensao 
+from fis_denuncia d left join fis_notificacao n on 
+     n.iddenuncia = d.iddenuncia left join fis_ocorrencia o on 
+     o.idOcorrencia = n.idocorrencia left join fis_autoinfracao a on 
+     a.codNotificacao = n.codNotificacao left join fis_registroapreensao r on 
+     r.codNotificacao = n.codNotificacao 
+,  fis_situacao s, fis_solicitacao si, fis_tiporequerente tr 
+,  session.cidadaoInf ci, session.cidadaoReq cr 
+where s.idSituacao = d.idSituacao 
+and   si.idsolicitacao = d.idsolicitacao 
+and   tr.idtiporequerente = si.idtiporequerente 
+and   ci.codinfrator = d.idinfrator 
+and   cr.idsolicitacao = si.idsolicitacao 
+and   ci.iddenuncia = d.iddenuncia 
+and   cr.codrequerente = si.idrequerente 
+and   ci.codInfrator = 116943
+order by iddenuncia, codnotificacao
+
+
+
+
+
+select d.iddenuncia,ci.codinfrator, ci.infrator, ci.cpf, ci.cnpj 
+,d.datahoradenuncia, d.datahoraatendimento, d.assunto 
+,d.descricao, d.procedimentos, s.descricao as situacao 
+,cr.requerente, tr.descricao as tiporequerente
+from fis_denuncia d 
+,  fis_situacao s, fis_solicitacao si, fis_tiporequerente tr 
+,  session.cidadaoInf ci, session.cidadaoReq cr 
+where s.idSituacao = d.idSituacao 
+and   si.idsolicitacao = d.idsolicitacao 
+and   tr.idtiporequerente = si.idtiporequerente 
+and   ci.codinfrator = d.idinfrator 
+and   cr.idsolicitacao = si.idsolicitacao 
+and   ci.iddenuncia = d.iddenuncia 
+and   cr.codrequerente = si.idrequerente 
+and   ci.codInfrator = 116943
+order by iddenuncia
+
+
+
+ppDBText8, a 14
+
+
+codnotificacao, datahoranotificacao, codautoinfracao, datahorainfracao, codapreensao, datahoraapreesao

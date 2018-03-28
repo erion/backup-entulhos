@@ -1,0 +1,85 @@
+TABELAS TEMPORÁRIAS
+
+Declare Global Temporary table session.cidadaoReq as 
+        select c1.cod_cidadao as codRequerente 
+        ,      c1.nome_cidadao as requerente 
+        ,      cd1.numero_documento as CPF 
+        ,      cd2.numero_documento as CNPJ 
+        ,      s.idsolicitacao 
+        from ger_cidadao c1 left join ger_cidadao_documento cd1 on 
+               c1.cod_cidadao = cd1.cod_cidadao 
+               and cd1.cod_tipo_documento = 2 left join ger_cidadao_documento cd2 on 
+               c1.cod_cidadao = cd2.cod_cidadao 
+               and cd2.cod_tipo_documento = 3,  
+             fis_solicitacao s  
+        where 
+        c1.cod_cidadao in (select distinct idrequerente from fis_solicitacao where idrequerente <> '') 
+        on commit preserve rows with norecovery 
+
+
+Declare Global Temporary table session.cidadaoInf as 
+        select c1.cod_cidadao as codInfrator 
+        ,      c1.nome_cidadao as infrator 
+        ,      cd1.numero_documento as CPF 
+        ,      cd2.numero_documento as CNPJ 
+        ,      d.iddenuncia 
+        from ger_cidadao c1 left join ger_cidadao_documento cd1 on 
+               c1.cod_cidadao = cd1.cod_cidadao 
+               and cd1.cod_tipo_documento = 2 left join ger_cidadao_documento cd2 on 
+               c1.cod_cidadao = cd2.cod_cidadao 
+               and cd2.cod_tipo_documento = 3,  
+             fis_denuncia d  
+        where 
+        c1.cod_cidadao in (select distinct idinfrator from fis_denuncia where idinfrator <> '') 
+        on commit preserve rows with norecovery 
+
+HISTORICO INFRATOR
+
+select d.iddenuncia,ci.codinfrator, ci.infrator, ci.cpf, ci.cnpj 
+,d.datahoradenuncia, d.datahoraatendimento, d.assunto 
+,d.descricao, d.procedimentos, s.descricao as situacao 
+,cr.requerente, tr.descricao as tiporequerente, n.codNotificacao 
+,n.dataHoraNotificacao, o.descricao as ocorrencia, a.codAutoinfracao 
+,a.dataHoraInfracao, a.descricao as descricaoInfracao 
+,a.exigencia as exigenciaInfracao, r.codApreensao, r.dataHoraapreensao 
+from fis_denuncia d left join fis_notificacao n on 
+     n.iddenuncia = d.iddenuncia left join fis_ocorrencia o on 
+     o.idOcorrencia = n.idocorrencia left join fis_autoinfracao a on 
+     a.codNotificacao = n.codNotificacao left join fis_registroapreensao r on 
+     r.codNotificacao = n.codNotificacao 
+,  fis_situacao s, fis_solicitacao si, fis_tiporequerente tr 
+,  session.cidadaoInf ci, session.cidadaoReq cr 
+where s.idSituacao = d.idSituacao 
+and   si.idsolicitacao = d.idsolicitacao 
+and   tr.idtiporequerente = si.idtiporequerente 
+and   ci.codinfrator = d.idinfrator 
+and   cr.idsolicitacao = si.idsolicitacao 
+and   ci.iddenuncia = d.iddenuncia 
+and   cr.codrequerente = si.idrequerente 
+and   ci.codInfrator = 116943
+order by iddenuncia, codnotificacao
+
+
+QRY PRINCIPAL
+
+select  d.datahoraDenuncia 
+,          d.assunto 
+,          cr.requerente 
+,          ci.infrator 
+,          d.idInfrator 
+,          si.descricao 
+,          d.iddenuncia 
+,          d.idsolicitacao 
+from       fis_denuncia d 
+,          session.cidadaoInf ci 
+,          fis_solicitacao s 
+,          session.cidadaoReq cr 
+,          fis_situacao si 
+where d.idSolicitacao = s.idSolicitacao 
+and   si.idSituacao = d.idSituacao 
+and   ci.iddenuncia = d.iddenuncia 
+and   cr.idsolicitacao = s.idsolicitacao 
+and   cr.codRequerente = s.idrequerente 
+and   ci.codInfrator = d.idinfrator 
+and   si.idsituacao = 1 
+and   d.codlotacao like '1.01.02.15.01%'

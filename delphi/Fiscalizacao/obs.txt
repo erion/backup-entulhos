@@ -1,0 +1,1 @@
+Verificar porque só é permitido abrir o frmHistoricoInfrator uma vez
