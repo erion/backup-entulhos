@@ -1,0 +1,26 @@
+<?php
+	$titulo = "Potencial Comprador";
+	$cabecalho = "<html>" .
+				 	"<head>" .
+				 		"<title>Rosana Imóveis - Administração</title>" .
+				 		"<link rel='stylesheet' type='text/css' href='css/principal.css'>" .
+				 	"</head>" .
+				 	"<body>" .
+				 	"<div id='tudo'>" .
+				 		"<div class='cabecalho'><div class='cabecalho_logo'></div><h1>Área administrativa</h1>" .
+				 			"<div class='menu'>";
+	$cabecalho .= anchor("imoveis/listar","Imóveis")." | ";
+	$cabecalho .= anchor("postos/listar","Postos de Combustível")." | ";
+	$cabecalho .= anchor("clientes/listar","Clientes")." | ";
+	$cabecalho .= anchor("potencial_comprador/listar","Potenciais Compradores")." | ";
+	$cabecalho .= 			"</div>" .
+				 		"</div>" .
+				 		"<div class='cabecalho_linha'></div>";
+	$cabecalho .= 		"<ul>";			 		
+	$cabecalho .= 			"<li>".anchor('potencial_comprador/listar',"<span class='listar'>&nbsp;</span>")."</li>";
+	$cabecalho .= 			"<li>".anchor('potencial_comprador/consultar',"<img src='icons/buscar.png' />")."</li>";
+	$cabecalho .= 			"<li>".anchor('potencial_comprador/cadastrar',"<img src='icons/cadastrar.png' />")."</li>";	
+	$cabecalho .= 		"</ul>" .
+				  		"<div class='conteudo'><h2>".$titulo."</h2>";
+	echo $cabecalho;			 	
+?>

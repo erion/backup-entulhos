@@ -1,0 +1,33 @@
+<?php
+
+class Cliente extends Controller {
+	
+	function Cliente() {
+		parent::Controller();
+		$this->load->model('cliente_model');
+	}
+	
+	function index() {
+		$this->listar();
+	}
+	
+	function editar($id=0,$outro_segmento='') {
+		$lala = SQL::result('cliente','*');
+		
+	}
+	
+	function listar($pagina=0) {
+		$this->load->library('pagination');
+
+		$this->pagination->initialize(get_pagination_config(
+			$this->cliente_model->total()
+		));
+		
+		$this->view->load('clientes/listar', array(
+			'registros' => $this->cliente_model->listar($pagina)
+		));
+	}	
+	
+}
+
+?>
