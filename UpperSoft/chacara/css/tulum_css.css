@@ -1,0 +1,184 @@
+body {
+	padding: 0;
+	margin: 0 auto;
+	background-color:#FFF;
+	font-family: Trebuchet MS;
+	text-align:center;	
+}
+a {
+	color: #93C3F3;
+}
+a:hover {
+	background: #93C3F3;
+	color: #000;
+}
+#foto_centro a img {
+	border: 1px solid #000 !important;
+}
+
+#tudo {
+	width: 800px;
+	height: 100%;
+	border: #000 1px solid;
+	overflow: hidden;	
+	margin: 0 auto;
+	text-align:left;
+	min-height:100%;
+	background-color: #FFF;
+}
+
+#login {
+	text-align:left;
+	margin-left:auto;
+	margin-right:auto;
+	width:150px;
+	margin-top:30px;
+}
+
+#botao {text-align:center;}
+
+.botao_salvar {
+	padding: 0 4px;
+}
+
+#menu{ 
+	width: 100%;
+	height: 43px;
+	background-image: url(../images/menu_bar.jpg); 
+	text-align: center;
+	padding: 0;
+	margin: 0 auto;
+}
+
+#nav {
+	list-style:none;
+	margin: 0 auto;
+	padding: 0;
+	clear:both;
+}
+
+#nav li{
+	width: 800px;
+	text-decoration: none;
+	display:inline;
+}
+
+ul#nav { 
+	margin: 0 auto; 
+	padding: 0 0 0 1.5em;
+	padding-right: 3em;
+	text-align: center;
+}
+
+ul#nav li {
+	list-style:none;	
+	display:inline;
+}
+
+ul#nav li a {
+	font: 15px Trebuchet MS;
+	color: #000;
+	text-decoration: none;
+	background:  #FCFCFC;
+	text-align: center;
+	padding:3px 10px ;
+}
+
+ul#nav a:hover {
+	color: #666;
+	background: #93C3F3;
+}
+
+#nav a.selecionado {
+	color: #666;
+	background: #93C3F3;
+}
+
+#topo {	
+	width: 100%;
+	text-align:center;
+	margin: 0 auto;
+	display: block;
+	padding: 0;
+}
+
+#conteudo {
+	padding: 20px;
+	background-color: #FFF;
+	text-align: left;
+	font:0.90em Trebuchet MS;
+	float: left;
+	width: 560px;
+	height: 100%;
+}
+#conteudo_todo {
+	display: table;
+	width: 100%;
+}
+
+#form1 {
+	text-align: left;
+}
+
+#auxiliar {
+	width: 100%;
+	padding-top:10px;
+	background-color: #FFF;
+}
+
+#clear {
+	clear: both;
+	background-color: #FFF;
+}
+
+#foto_todo {
+	float: left;
+	margin-top:10px;
+}
+
+#foto_topo {
+	background:url(../images/caixa_cima.jpg);
+	width:163px;
+	height:16px;
+}
+
+#foto_centro {
+	background:url(../images/caixa_centro.jpg) repeat-y;
+	width:163px;
+	height:auto;
+	text-align:center;
+}
+
+#foto_baixo {
+	background:url(../images/caixa_baixo.jpg);
+	width:163px;
+	height:21px;
+}
+
+#rodape {
+	margin: 0 auto;
+	text-align: center;
+	padding: 0;
+	background-color:#FFF;
+	font-size: 12px;
+}
+
+dl {
+	width: 100%;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+dl dt {
+	width: 120px !important;
+	font-weight: bold;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+dl dd {
+	width: 300px;
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
