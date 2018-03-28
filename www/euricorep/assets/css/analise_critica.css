@@ -1,0 +1,26 @@
+* {
+	margin:0px;
+	padding:0px;
+	border:none;
+	font-size:9px;
+	font-family:Arial;
+}
+
+table {width:100%;  }
+table img {padding:2px;}
+table tr.normal {line-height: 15px;}
+small{font-weight:normal !important;}
+.observacao{font-size:8px !important; font-weight:normal !important;}
+.borda {border:1px solid;}
+.rborda{border-right:1px solid;}
+.lborda{border-left:1px solid;}
+.quadro{border-top:1px solid;border-left:1px solid;border-right:1px solid;}
+.linha {border-bottom:1px solid;}
+.titulo {font-weight:bold;text-align:center;text-transform:uppercase;}
+.bold {font-weight:bold;}
+.right {text-align:right;padding-right:5px;}
+.center {text-align:center;}
+.color {background-color:gray;}
+.Xbg {background:url(../img/xbg_analise_critica.png) center no-repeat;}
+
+.page-break { display:block; page-break-before:always; }

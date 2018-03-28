@@ -1,0 +1,54 @@
+<!-- START BLOCK : PESQUISA -->
+<div class="form-quebra-topo"></div>
+<div>PESQUISA</div>
+<div class="form-quebra-topo2"></div>
+
+<form action="index.php?modulo={modulo}&acao={acao}&id_tipo={id_tipo}" method="post" id="frmPesquisa">
+<div class="pesquisa">
+	<!-- START BLOCK : PESQUISA-CAMPO -->
+	<div class="pesquisa-campo">{label}</div>
+    <div class="pesquisa-valor">{input}</div>
+    <div class="clr"></div>    
+    <!-- END BLOCK : PESQUISA-CAMPO -->
+	<div class="pesquisa-campo">&nbsp;</div>
+    <div class="pesquisa-valor"><input type="image" src="img/bt-pesquisar.gif" /></div>
+    <div class="clr"></div>
+</div>
+<input type="hidden" name="evento" value="busca" />
+</form>
+<!-- END BLOCK : PESQUISA -->
+<div class="form-quebra-topo"></div>
+<div>Listando {nro_registros} registros</div>
+<div class="form-quebra-topo2"></div>
+
+<form name="frmDelete" action="index.php?modulo={modulo}&acao={acao}&id_tipo={id_tipo}" method="post">
+<table class="tbl-listagem" cellspacing="0" cellpadding="0">
+<tr>
+	<!-- START BLOCK : LABELS -->
+	<th>{label}</th>
+	<!-- END BLOCK : LABELS -->
+</tr>
+
+<!-- START BLOCK : LINHAS -->
+<tr class="tbl-linha">
+    <!-- START BLOCK : CAMPOS -->
+    <td {par_editar} width="{tam_campo}">{valor}</td>
+    <!-- END BLOCK : CAMPOS -->
+</tr>
+<!-- END BLOCK : LINHAS -->
+
+</table>
+</form>
+
+<div class="paginacao">
+	<div class="form-quebra-topo"></div>
+    <!-- START BLOCK : BT-PAGINACAO-ANTERIOR -->
+	<div class="paginacao-anterior"><a href="{par_paginacao_anterior}">Página Anterior</a></div>
+    <!-- END BLOCK : BT-PAGINACAO-ANTERIOR -->
+    <div class="paginacao-paginas">{paginacao}</div>
+    <!-- START BLOCK : BT-PAGINACAO-PROXIMA -->
+	<div class="paginacao-proxima"><a href="{par_paginacao_proxima}">Próxima Página</a></div>
+    <!-- END BLOCK : BT-PAGINACAO-PROXIMA -->
+    <div class="clr"></div>
+	<div class="form-quebra-topo2"></div>
+</div>

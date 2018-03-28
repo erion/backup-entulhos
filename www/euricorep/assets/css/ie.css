@@ -1,0 +1,32 @@
+* {text-align:center;}
+#TB_window {overflow:auto;}
+#conteudo {padding-left:0px !important;}
+
+
+#form_filtro .box_datas .aplicar_filtro {width:355px;}
+#form_filtro dl, .login form dl, #conteudo .form_cadastro dl, .form_entidade dl,
+#TB_window .form_entidade dl {width:auto;}
+p .x-form-text {text-align:left;position:relative;left:-25px;}
+form, form dl dt, form dl dd, form dl dd input, #TB_window form dl dt, #TB_window form dl dd, .x-form-text {
+	text-align:left !important;
+}
+
+.x-form-text, .x-form-field, .x-combo-list-item {text-align:left !important;padding-top:2px;}
+.x-date-picker {text-align:center !important;}
+#conteudo .form_cadastro div.x-form-field-wrap.x-form-field-trigger-wrap,
+#form_filtro div.x-form-field-wrap.x-form-field-trigger-wrap {
+	text-align:left;
+	margin:0px !important;
+	padding:0px !important;
+	position:relative;
+	left:-1px;
+}
+
+#btn_confirmar_login {
+    position:relative;
+	left:-20px;
+}
+
+.resumo_pedido, .resumo_pedido ul li, #TB_window ul.dados li{text-align:left !important;}
+dl.contatos, dl.contatos dt, dl.contatos dd{text-align:left !important;}
+#form_filtro .linha, #form_filtro .linha .coluna_l, #form_filtro .linha .coluna_r {text-align:left;}

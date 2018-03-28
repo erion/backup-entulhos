@@ -1,0 +1,93 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+a {text-decoration:none !important;color:black !important;}
+
+.usuario, #esconder_menu, #filtro, #contrair, .paginacao, table.listar, div.add, #conteudo h1,
+.resumo_pedido img, .resumo_pedido ul li.risco_fechar, .resumo_pedido ul li.risco, #conteudo h3,
+#conteudo img, #conteudo ul li.risco_fechar, #conteudo ul li.risco{display:none;}
+#conteudo ul li, .resumo_pedido ul li {list-style:none;}
+
+#conteudo {width:100% !important;padding:0px !important;}
+.cabecalho img {
+    display:block;
+    width:294px;
+    height:77px;
+    padding:10px 0px 0px 35px !important;
+}
+
+.resumo_pedido {
+    border:0px;
+	margin:0px !important;
+	padding:10px 0px 0px 35px !important;
+	width:100%;
+}
+
+#TB_window .resumo_pedido {
+	position:absolute;
+	top:87px;
+	left:0px;
+	padding:10px 0px 0px 35px !important;
+}
+
+.resumo_pedido ul.obs, #conteudo ul.obs {
+    padding:20px 0px 0px 0px;
+    width:100%;
+    clear:both;
+}
+
+.resumo_pedido .box_datas, #conteudo .box_datas {
+    width:100%;
+    clear:both;
+}
+
+.resumo_pedido dl.datas, #conteudo dl.datas {
+    float:left;
+    padding:20px 30px 0px 0px;
+    font:14px Georgia;
+}
+
+.resumo_pedido dl.datas dt, #conteudo dl.datas dt {
+    display:inline-block;
+    float:none;
+}
+
+.resumo_pedido dl.datas dd, #conteudo dl.datas dd{
+    display:table-row;
+    float:none;
+}
+
+.resumo_pedido .detalhes_artigo, #conteudo .detalhes_artigo {
+    clear:left;
+    padding-top:20px;
+    width:100% !important;
+    font:14px Georgia !important;
+}
+
+.resumo_pedido .detalhes_artigo .detalhes, #conteudo .detalhes_artigo .detalhes {
+    float:left;
+    width:40%;
+    font:14px Georgia !important;
+}
+
+.resumo_pedido .detalhes_artigo .artigos_cores, #conteudo .detalhes_artigo .artigos_cores {
+    float:left;
+    width:50%;
+}
+
+.resumo_pedido .detalhes_artigo .artigos_cores table {width:100%;text-align:left;}
+/*.resumo_pedido .detalhes_artigo table tr.finalizado, .resumo_pedido .detalhes_artigo table tr.finalizado td a.thickbox
+{text-decoration:none !important;color:black !important;}*/
+.resumo_pedido .detalhes_artigo .artigos_cores table tr td.reprogramacao,
+.resumo_pedido .detalhes_artigo .artigos_cores table th.reprogramacao {display:inline !important;visibility:visible !important;}
+.resumo_pedido .detalhes_artigo .artigos_cores table tr td {
+    text-align:left !important;
+    font-weight:bold;
+}
+
+.resumo_pedido .detalhes_artigo .artigos_cores table tr td a,
+#conteudo .detalhes_artigo .artigos_cores table tr td a{text-decoration:none;color:black;}
+.resumo_pedido .detalhes_artigo .artigos_cores table th,
+#conteudo .detalhes_artigo .artigos_cores table th{font-weight:normal;width:30% !important;}

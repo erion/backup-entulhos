@@ -1,0 +1,19 @@
+<div class="form-quebra-topo"></div>
+<div>CADASTRO</div>
+<div class="form-quebra-topo2"></div>
+
+<form action="index.php?modulo={modulo}&acao={acao}&id_tipo={id_tipo}&cod={cod}" method="post" enctype="multipart/form-data" id="frm{acao}{modulo}">
+	<!-- START BLOCK : CAMPOS -->
+    <div class="form-campo-titulo">{campo}</div>
+    <div class="form-campo">{input}</div>
+	<!-- END BLOCK : CAMPOS -->
+    
+	<div class="form-bt"><input type="image" src="{IMG_CLASSPATH}bt-salvar.gif" /></div>
+	<div class="form-bt"><a href="{par_voltar}" class="bt-cancelar-ajax"><img src="{IMG_CLASSPATH}bt-cancelar.gif" /></a></div>
+    <!-- START BLOCK : BT-DELETAR -->
+	<div class="form-bt"><a href="{par_deletar}" onclick="return confirm('Tem certeza que deseja deletar?')"><img src="{IMG_CLASSPATH}bt-deletar.gif" /></a></div>
+    <!-- END BLOCK : BT-DELETAR -->
+    <div class="clr"></div>
+    <div class="form-msg"></div>
+    {hidden}
+</form>

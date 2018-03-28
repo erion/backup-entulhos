@@ -1,0 +1,36 @@
+<div class="form-quebra-topo"></div>
+<span class="ttl-form">{modulo} &raquo; <strong>Cadastro</strong></span>
+<div class="form-quebra-topo2"></div>
+
+<form action="index.php?modulo={modulo}&acao={acao}&id_tipo={id_tipo}&cod={cod}" method="post" enctype="multipart/form-data" id="frmCadastro">
+	
+	<!-- START BLOCK : CAMPOS -->
+    <div class="form-campo-titulo">{campo} <span class="obrigatorio">{obrigatorio}</span></div>
+    <div class="form-campo">{input}</div>
+    <div class="clr"></div>
+	<!-- END BLOCK : CAMPOS -->
+
+	<div id="form-botoes">
+		<div class="corpo-botoes">
+
+			<a href="javascript://" class="btn salvar" title="Salvar">
+				<div class="bg-left"><!-- --></div>
+				<span>Salvar</span>
+				<div class="bg-right"><!-- --></div>
+			</a>
+			<a href="{par_voltar}" class="btn cancelar" title="Cancelar">
+				<div class="bg-left"><!-- --></div>
+				<span>Cancelar</span>
+				<div class="bg-right"><!-- --></div>
+			</a>			
+			
+			<div class="clr"><!-- --></div>
+		</div>
+		<div class="bg-form"><!-- --></div>
+	</div>
+
+    
+    <div class="clr"></div>
+    <div class="form-msg"></div>
+    {hidden}
+</form>

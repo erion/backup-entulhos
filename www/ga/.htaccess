@@ -1,0 +1,12 @@
+# Habilita a Reescrista
+RewriteEngine on
+
+# Regra para diretório e arquivos
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Reescreve sobre o arquivo index.php
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+#RewriteCond %{HTTP_HOST} ^betonart\.com\.br
+#RewriteRule ^(.*)$ http://www.betonart.com.br/$1 [R=301,L]

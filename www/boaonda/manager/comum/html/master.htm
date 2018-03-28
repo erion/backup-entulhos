@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<meta name="robots" content="noindex, nofollow">
+<!-- CSS -->
+<link rel="stylesheet" href="{CSS_CLASSPATH}smoothness/jquery.ui.css" type="text/css" />
+<link rel="stylesheet" href="{CSS_CLASSPATH}jquery.datePicker.css" type="text/css" />
+<link rel="stylesheet" href="{CSS_CLASSPATH}jquery.colorPicker.css" type="text/css" />
+<link rel="stylesheet" href="{CSS_CLASSPATH}jquery.gritter.css" type="text/css"  />
+<link rel="stylesheet" href="{CSS_CLASSPATH}jquery.fancybox.css" type="text/css"  />
+<link rel="stylesheet" href="{CSS_CLASSPATH}cms.css" type="text/css" />
+<!-- JAVASCRIPT -->
+<script src="{JS_PLUGINS_CLASSPATH}jquery.js?1" type="text/javascript"></script>
+<script src="{JS_PLUGINS_CLASSPATH}jquery.ui.js?1" type="text/javascript"></script>
+<script src="{JS_PLUGINS_CLASSPATH}jquery.form.js?1" type="text/javascript"></script>
+<script src="{JS_PLUGINS_CLASSPATH}jquery.validate.js?1" type="text/javascript"></script>
+<script src="{JS_PLUGINS_CLASSPATH}jquery.date.js?1" type="text/javascript"></script>
+<script src="{JS_PLUGINS_CLASSPATH}jquery.datePicker.js?1" type="text/javascript"></script>
+<script src="{JS_PLUGINS_CLASSPATH}jquery.colorPicker.js?1" type="text/javascript"></script>
+<script src="{JS_PLUGINS_CLASSPATH}jquery.gritter.js?1" type="text/javascript" ></script>
+<script src="{JS_PLUGINS_CLASSPATH}jquery.fancybox.js?1" type="text/javascript" ></script>
+<script src="{JS_PLUGINS_CLASSPATH}jquery.ctrl.js?1" type="text/javascript" ></script>
+<script src="{JS_CLASSPATH}site.js?1" type="text/javascript"></script>
+<script src="{JS_CLASSPATH}custom.js?1" type="text/javascript"></script>
+<script src="{JS_CLASSPATH}forms.js?1" type="text/javascript"></script>
+<script src="http://www.afirma.cc/ckeditor/ckeditor.js?1" type="text/javascript"></script>
+<!-- FIM DOS INCLUDES DO SISTEMA -->
+<title> Gerenciador de Conteúdo &raquo; AFIRMA.CC </title>
+
+<script type="text/javascript">
+	$( function() {
+		var MSG_TITULO = '{retorno-titulo}';
+		var MSG_RETORNO = '{retorno-mensagem}';
+		var MSG_IMAGEM = '{retorno-imagem}';
+
+		if( MSG_TITULO && MSG_RETORNO )
+			msgRetorno(MSG_TITULO, MSG_RETORNO, MSG_IMAGEM);
+	} );
+</script>
+</head>
+
+<body>
+<div id="site">
+	<div id="site-topo">
+    	<div class="topo-conteudo clearfix">
+	    	<div class="logo">
+	    		<a href="{URL_MANAGER}"><img alt="Afirma.cc" width="100" src="{IMG_CLASSPATH}logo.png" /></a>
+	    	</div>
+            <div class="site-topo-info">
+	            <div class="site-infos">Olá <strong>{nome_usuario} | </strong> <a href="{url_editar_usuario}">Editar</a> ou <a href="index.php?modulo=Login&acao=logout">Sair</a></div>
+            </div>
+		</div>
+    </div>
+	<div id="site-centro">
+    	<div class="conteudo">
+            <div id="menu">
+				<ul>
+					<!-- START BLOCK : MENU -->
+					<li>
+						<span class="ttl-princ">{categoria}</span>
+							<ul>
+							<!-- START BLOCK : MENU-SUB -->
+							<li><a href="{url}" class="ttl-sec {ativo}" title="{modulo}">{modulo}</a></li>
+							<!-- END BLOCK : MENU-SUB -->  						
+							</ul>
+						</li>
+					<!-- END BLOCK : MENU -->
+	            </ul>
+            </div>			
+            <div id="principal">
+				<div class="box-principal">
+									
+					<div id="sub-menu" class="clearfix">
+						<!-- START BLOCK : PERMISSOES -->
+							<a href="{url_permissao}" title="{titulo}" class="btn {css}"><span>{titulo}</span></a>
+						<!-- END BLOCK : PERMISSOES -->
+					</div>
+							
+					{HTML}
+					
+				</div>
+            </div>
+			<div class="clr"><!-- --></div>
+            <div id="rodape">Todos os direitos reservados &copy; <a href="htt://www.afirma.cc" title="Afirma.cc">Afirma.cc</a> | 2010 - 2012</div>
+       	</div>
+    </div>
+	<div class="clr"><!-- --></div>
+</div>
+
+<input type="hidden" name="__modulo" id="__modulo" value="{modulo}" />
+<input type="hidden" name="__acao" id="__acao" value="{acao}" />
+<input type="hidden" name="__metodo" id="__metodo" value="{metodo}" />
+
+</body>
+</html>

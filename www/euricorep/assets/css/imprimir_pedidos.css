@@ -1,0 +1,61 @@
+@page {
+}
+
+* {
+    margin:0;
+    padding:0;
+    *text-align:center;
+}
+
+#todo {
+    width:978px;
+    padding-left:1%;
+    font-size:12px;
+    font-family:Verdana;
+    margin:0px auto;
+    clear:both;
+}
+
+#todo a img {border:none;}
+
+.cabecalho {
+    height:228px;
+    padding:10px 0px 10px 0px;
+}
+
+.usuario {display:none;}
+
+.cabecalho img {
+    float: left;
+    padding:10px 0px 10px 0px;
+}
+
+#esconder_menu {display:none;}
+#contrair {display:none;}
+#expandir {display:none;}
+#filtro {display:none;}
+.add {display:none;}
+
+h1 {
+    padding:0px 0px 20px 0px;
+    font-family:Georgia;
+    font-size:28px;
+    font-weight:normal;
+    text-align:left;
+}
+
+#conteudo.printable {
+    margin:0px auto;
+    width:100% !important;
+    float:left;
+    padding-bottom:15px;
+    text-align:left;
+}
+
+#conteudo.printable img {display:none;}
+table.listar {width:100%;}
+table.listar tr th {border:none;}
+table.listar tr th a {color:black;text-decoration:none;}
+table.listar tr.cor {background:#e0e0e0 !important;text-align:left;padding:2px;}
+table.listar tr td  {text-align:left;border:1px solid;padding:2px;}
+.break {page-break-after:always !important;}

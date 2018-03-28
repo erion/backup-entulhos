@@ -1,0 +1,18 @@
+# Disallow all crawlers access to certain pages.
+
+User-agent: *
+Disallow: /comum/
+Disallow: /comum/css
+Disallow: /comum/js
+Disallow: /comum/img
+Disallow: /comum/fancybox
+Disallow: /manager/
+Disallow: /application/
+Disallow: /codeigniter/
+Disallow: /system/
+Disallow: /cgi-bin/
+Disallow: /cgi-image/
+Disallow: /cgi-local/
+Disallow: /online-store/
+Disallow: /stats/
+Disallow: /webmail/

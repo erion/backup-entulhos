@@ -1,0 +1,45 @@
+<!-- START BLOCK : PESQUISA -->
+<div class="form-quebra-topo"></div>
+<div>PESQUISA</div>
+<div class="form-quebra-topo2"></div>
+
+<form action="index.php?modulo={modulo}&acao={acao}&id_tipo={id_tipo}" method="post" id="frmPesquisa">
+<div class="pesquisa">
+
+	<!-- START BLOCK : PESQUISA-CAMPO -->
+	<div class="pesquisa-campo">{label}</div>
+    <div class="pesquisa-valor">{input}</div>
+    <div class="clr"></div>    
+    <!-- END BLOCK : PESQUISA-CAMPO -->
+	<div class="pesquisa-campo">&nbsp;</div>
+    <div class="pesquisa-valor"><input type="image" src="img/bt-pesquisar.gif" /></div>
+    <div class="clr"></div>
+</div>
+<input type="hidden" name="evento" value="busca" />
+</form>
+<!-- END BLOCK : PESQUISA -->
+<div class="form-quebra-topo"></div>
+<div>Listando {nro_registros} registros</div>
+<div class="form-quebra-topo2"></div>
+<div id="URL-Ordem">index.php?modulo={modulo}&acao=ordenar</div>
+<form name="frmDelete" action="index.php?modulo={modulo}&acao={acao}&id_tipo={id_tipo}" method="post">
+<div id="aviso-update"></div>
+<ul class="tbl-listagem" cellspacing="0" cellpadding="0">
+    <li class="headers">
+        <!-- START BLOCK : LABELS -->
+        <dt>{label}</dt>
+        <!-- END BLOCK : LABELS -->
+        <div class="clr"></div>
+    </li>
+
+    <!-- START BLOCK : LINHAS -->
+    <li class="tbl-linha" id="l{chave}">
+        <!-- START BLOCK : CAMPOS -->
+        <dd {par_editar}>{valor}&nbsp;</dd>
+        <!-- END BLOCK : CAMPOS -->
+        <div class="clr"></div>    
+    </li>
+    <!-- END BLOCK : LINHAS -->
+
+</ul>
+</form>

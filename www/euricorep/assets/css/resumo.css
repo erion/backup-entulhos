@@ -1,0 +1,154 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+#conteudo {padding-left:15px;width:76%}
+#conteudo .resumo_pedido {width:90%;}
+
+#TB_load {
+    margin:0px auto;
+}
+
+.resumo_pedido h4 {
+    font:20px Georgia !important;
+    color:black !important;
+    padding:0px !important;
+    margin:0px !important;
+    text-align:left !important;
+}
+
+.resumo_pedido h2 {
+    font:20px Georgia !important;
+    color:black !important;
+    padding:0px !important;
+    margin:0px 0px 5px 0px !important;
+    font-weight:bold !important;
+    text-align:left !important;
+}
+
+.resumo_pedido h2 span {font-weight:normal;text-align:left !important;}
+.resumo_pedido h4 span {
+    font:12px Georgia;
+    color:black !important;
+    font-weight:normal;
+    text-align:left !important;
+}
+
+.resumo_pedido ul li {list-style:none;}
+.resumo_pedido ul.imagens {float:right;}
+.resumo_pedido ul.imagens li {
+    margin-top:8px;
+    cursor:pointer;cursor:hand;
+}
+
+.resumo_pedido ul li a {text-decoration:none;color:black !important;}
+.resumo_pedido ul.imagens li.risco {
+    border-bottom:1px solid;
+    border-color:#666666;
+    padding-bottom:10px;
+}
+
+.resumo_pedido ul.imagens li.risco_fechar {
+    margin-top:-10px;
+    border-bottom:1px solid;
+    border-color:#666666;
+    padding-bottom:10px;
+}
+
+.resumo_pedido ul {
+    margin-top:20px;
+    font:14px Georgia;
+    text-align:left !important;
+}
+
+.resumo_pedido ul.obs {
+    font:14px Georgia;
+    width:90%;
+    display:inline-block;
+    clear:both;
+    text-align:left !important;
+}
+
+.resumo_pedido ul.obs img {
+	padding:5px 0px 0px 3px;
+	cursor:pointer;*cursor:hand;
+}
+
+.resumo_pedido dl.datas {
+    float:left;
+    padding:20px 40px 0px 0px;
+    font:14px Georgia;
+    text-align:left !important;
+}
+
+.resumo_pedido dl.datas dt {
+    display:inline-block;
+    float:none;
+    text-align:left !important;
+}
+
+.resumo_pedido dl.datas dd{
+    display:table-row;
+    float:none;
+    text-align:left !important;
+}
+
+.resumo_pedido .detalhes_artigo {
+    clear:left;
+    padding-top:20px;
+    text-align:left !important;
+    font:14px Georgia;
+}
+
+.resumo_pedido .detalhes_artigo .detalhes {
+    float:left;
+    width:40% !important;
+    margin-right:10px;
+    text-align:left !important;
+}
+
+.resumo_pedido .detalhes_artigo dl dt {
+    width:50%;
+    display:inline-block;
+    text-align: right !important;
+}
+
+.resumo_pedido .detalhes_artigo dl dd {
+    display:inline-block;
+    text-align:left !important;
+    width:49%;
+    float:right;
+}
+
+.resumo_pedido .detalhes_artigo .artigos_cores {
+    float:left;
+    width:44% !important;
+    text-align:left !important;
+}
+
+.resumo_pedido .detalhes_artigo table {width:100%;text-align:left;}
+.resumo_pedido .detalhes_artigo table tr td a {text-decoration:none;border:none;}
+.resumo_pedido .detalhes_artigo table tr.finalizado, .resumo_pedido .detalhes_artigo table tr.finalizado td a.thickbox
+{text-decoration:line-through;color:green !important;}
+.resumo_pedido .detalhes_artigo .artigos_cores table {width:100% !important;font-size:12px;text-align:left !important;}
+.resumo_pedido .detalhes_artigo .artigos_cores table th {font-weight:normal;width:20%;text-align:left !important;}
+.resumo_pedido .detalhes_artigo .artigos_cores table tr td a{text-decoration:none;color:black !important;}
+.resumo_pedido .detalhes_artigo .artigos_cores table tr td a.sublinhado,
+ul.obs li span a.sublinhado, h4 a.sublinhado:hover {text-decoration:underline;}
+.resumo_pedido .detalhes_artigo .artigos_cores table tr td a.sublinhado:hover,
+ul.obs li span a.sublinhado:hover, h4 a.sublinhado:hover {text-decoration:none;}
+.resumo_pedido .detalhes_artigo .artigos_cores table tr td.reprogramacao,
+.resumo_pedido .detalhes_artigo .artigos_cores table th.reprogramacao {display:none;visibility:hidden;text-align:left !important;}
+.resumo_pedido .detalhes_artigo .artigos_cores table tr td {
+    text-align:left !important;
+    font-weight:bold;
+}
+
+.resumo_pedido ul.obs li p, .resumo_pedido ul li span, .resumo_pedido dl dd span {font-weight:bold;display:inline-block;text-align:left !important;}
+.resumo_pedido ul.obs li span {font-weight:normal !important;}
+.resumo_pedido ul.obs li p a {text-decoration:underline;}
+.resumo_pedido ul.obs li p a:hover {text-decoration:none;}
+
+.qtip table {font-size:12px;}
+.qtip table th, .qtip table tr td {padding-right:3px;}

@@ -1,0 +1,116 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+* html>body .clearfix {
+	display: inline-block;
+	width: 100%;
+}
+body{
+	font-family: "Tahoma";
+	font-size: 12px;
+	color: #333333;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+}
+.clr{
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+img{
+	border: 0;
+}
+/* LINKS */
+a, a:link a:active a:visited {
+	text-decoration: none; 
+	color: #333333;
+	outline: none;
+}
+/* FIM DAS CONFIGS GERAIS */
+/* REFERENTE A MODELO */
+#site{
+	width: 100%;
+}
+.logo{
+	margin: 40px 0 20px 0;
+	text-align:center;
+}
+/* COLUNA A DIREITA */
+#site-dir{
+	width: 100%;
+	margin: 0 auto;
+}
+/* REFERENTE AO MENU */
+#menu{
+	background-color: #0064A8;
+	height: 33px;
+	padding: 0 0 0 16px;
+	min-width: 800px;
+	clear: both;
+	color: #fff;
+	font-size: 11px;
+}
+.login-topo-dt{
+	padding: 3px 0 0 0;
+}
+.login-msg{
+	color: #FF0000;
+	margin: 10px 0 10px 0;
+	height: 18px;
+	overflow: hidden;
+	line-height: 18px;
+	font-size: 12px;
+}
+/* REFERENTE AO SUB-MENU ( AÇÕES ) */
+#sub-menu{
+	height: 33px;
+	padding-left: 20px;
+}
+.bt-esqueci-minha-senha {
+	float: left;
+	padding: 10px 5px 10px 10px;
+	margin: 0 10px 0 0;
+	font-size: 11px;
+	background: url(../img/seta-sub-menu.gif) left no-repeat;
+}
+/* REFERENTE AO RODAPÉ */
+.menu-dados{
+	float: left;
+}
+.onze {
+	float: right;
+	font-size: 10px;
+	color: #FFFFFF;
+	margin: 9px 10px 0 0;
+}
+/* REFERENTE AO BLOCO PRINCIPAL */
+#principal{
+	background-color: #fff;
+	padding: 15px;
+	width: 250px;
+	margin: 0 auto;
+}
+
+#formLogin {
+	margin: 0 auto;
+	width: 160px;	
+}
+
+/* REFERENTE A PÁGINA DE FORM */
+.input-text{
+	width: 150px;
+	border: 1px solid #979797;
+	padding: 3px;
+}
+.form-campo-titulo{
+	margin: 10px 0 0 0;
+}
+.form-campo{
+	margin: 0 0 10px 0;
+}
+.form-bt{
+	float: left;
+	margin: 10px 10px 10px 0;
+}

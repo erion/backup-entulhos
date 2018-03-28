@@ -1,0 +1,114 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+img {display:none !important;}
+a {text-decoration:none !important;color:black !important;text-align:left;}
+p a {text-decoration:underline !important;color:blue !important;text-align:left;}
+
+h1 {
+    font:20px Georgia !important;
+    color:black !important;
+    padding:0px !important;
+    margin:0px !important;
+    text-align:left;
+}
+
+h2 {
+    font:20px Georgia !important;
+    color:black !important;
+    padding:0px !important;
+    margin:0px !important;
+    font-weight:bold !important;
+    text-align:left;
+}
+
+h2 {margin-bottom:5px !important;text-align:left;}
+h2 span {font-weight:normal;text-align:left;}
+
+h1 span {
+    font:12px Georgia;
+    color:black !important;
+    font-weight:normal;
+    text-align:left;
+}
+
+ul.imagens {display:none !important;}
+
+ul li {text-align:left;}
+
+ul {
+    margin-top:20px;
+    font:14px Georgia;
+    text-align:left;
+}
+
+ul.obs {
+    font:14px Georgia;
+    width:90%;
+    display:inline-block;
+    clear:both;
+    text-align:left;
+}
+
+dl.datas {
+    float:left;
+    padding:20px 40px 0px 0px;
+    font:14px Georgia;
+    text-align:left;
+}
+
+dl.datas dt {
+    display:inline-block;
+    float:none;
+    text-align:left;
+}
+
+dl.datas dd{
+    display:table-row;
+    float:none;
+    text-align:left;
+}
+
+.detalhes_artigo {
+    clear:left;
+    padding-top:20px;
+    text-align:left;
+    font:14px Georgia;
+}
+
+.detalhes_artigo .detalhes {
+    float:left;
+    width:50%;
+    margin-right:30px;
+    text-align:left;
+}
+
+.detalhes_artigo dl {text-align:left;}
+.detalhes_artigo dl dt {
+    width:120px;
+    text-align:right;
+}
+
+.detalhes_artigo dl dt, .detalhes_artigo dl dd {
+    display:inline-block;
+}
+
+.detalhes_artigo .artigos_cores {
+    float:left;
+    width:40%;
+}
+
+.detalhes_artigo .artigos_cores table {width:100%;font-size:12px;text-align:left;}
+.detalhes_artigo .artigos_cores table tr td.reprogramacao,
+.detalhes_artigo .artigos_cores table th.reprogramacao {display:none;visibility:hidden;}
+.detalhes_artigo .artigos_cores table tr td {
+    text-align:left !important;
+    font-weight:bold;
+}
+
+.detalhes_artigo .artigos_cores table tr td a{text-decoration:none;color:black;}
+.detalhes_artigo .artigos_cores table th {font-weight:normal;width:50% !important;}
+ul.obs li span,ul li span,dl dd span {font-weight:bold;display:inline-block;text-align:left;}
+.login {padding:5px 0px 0px 10px;}

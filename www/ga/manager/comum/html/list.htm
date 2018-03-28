@@ -1,0 +1,89 @@
+<div class="form-quebra-topo"></div>
+<!-- START BLOCK : PESQUISA -->
+<div class="bt-pesquisar">PESQUISAR</div>
+<div class="form-quebra-topo2"></div>
+<div class="pesquisar {status}">
+<form action="index.php?modulo={modulo}&acao={acao}&id_tipo={id_tipo}&evento=busca" method="post" id="frmPesquisa" name="frmPesquisa">
+<div class="pesquisa">
+	<!-- START BLOCK : PESQUISA-CAMPO -->
+	<div class="pesquisa-campo">{label}</div>
+    <div class="pesquisa-check"><input type="checkbox" name="chk_{fieldname}" id="chk_{fieldname}" {field_checked} /></div>
+    <div class="pesquisa-valor">{input}</div>
+    <div class="clr"></div>    
+    <!-- END BLOCK : PESQUISA-CAMPO -->
+	<div class="pesquisa-campo">&nbsp;</div>
+    <div class="pesquisa-valor"><a href="javascript://" class="btn" title="Pesquisar" onclick="frmPesquisa.submit();"><span>Pesquisar</span></a></div>
+    <div class="clr"></div>
+</div>
+</form>
+<br />
+</div>
+<!-- END BLOCK : PESQUISA -->
+<div>Listando {nro_registros} registros</div>
+<div class="paginacao" id="paginacao-topo"></div>
+
+<form name="frmDelete" action="index.php?modulo={modulo}&acao={acao}" method="post">
+
+<script type="text/javascript">
+$().ready(function(){
+	
+	var tbl = $('.tbl-listagem thead').html();
+	
+	$('.tbl-fixed').html(tbl).width($('.tbl-listagem').width());
+	
+	$(window).scroll(function(){
+		var scrollTop = $(this).scrollTop();
+		var topTable = $('.tbl-listagem').offset().top;
+		if( scrollTop > topTable ) {
+			$('.tbl-fixed').fadeIn('slow').removeClass('hidden');
+		} else {
+			$('.tbl-fixed').fadeOut('slow').addClass('hidden');
+		}
+	});
+	
+});
+</script>
+
+<table class="tbl-fixed hidden"></table>
+
+<table class="tbl-listagem" cellspacing="0" cellpadding="0">
+<thead>
+	<tr>
+		<!-- START BLOCK : LABELS -->
+		<th>{label}</th>
+		<!-- END BLOCK : LABELS -->
+	</tr>
+</thead>
+<tbody>
+	<!-- START BLOCK : LINHAS -->
+	<tr class="tbl-linha">
+	    <!-- START BLOCK : CAMPOS -->
+	    <td {par_editar} width="{tam_campo}">{valor}</td>
+	    <!-- END BLOCK : CAMPOS -->
+	</tr>
+	<!-- END BLOCK : LINHAS -->
+</tbody>
+</table>
+</form>
+
+<div class="paginacao" id="paginacao-rodape">
+	<!-- START BLOCK : PAGINACAO -->
+	<div class="form-quebra-topo"></div>
+    <!-- START BLOCK : BT-PAGINACAO-ANTERIOR -->
+	<div class="paginacao-anterior"><a href="{par_paginacao_anterior}">Página Anterior</a></div>
+    <!-- END BLOCK : BT-PAGINACAO-ANTERIOR -->
+    
+    <div class="paginacao-paginas">{paginacao}</div>
+    
+    <!-- START BLOCK : BT-PAGINACAO-PROXIMA -->
+	<div class="paginacao-proxima"><a href="{par_paginacao_proxima}">Próxima Página</a></div>
+    <!-- END BLOCK : BT-PAGINACAO-PROXIMA -->
+    <!-- END BLOCK : PAGINACAO -->
+    <div class="clr"></div>
+	<div class="form-quebra-topo2"></div>
+</div>
+
+<form name="frmUpdateField" id="frmUpdateField" action="index.php">
+	<input type="hidden" name="__id_tipo" id="__id_tipo" value="{id_tipo}" />	
+    <input type="hidden" id="__modulo" name="__modulo" value="{modulo}" />
+</form>
