@@ -1,0 +1,3 @@
+<?php
+	testa_sessao();
+?>
