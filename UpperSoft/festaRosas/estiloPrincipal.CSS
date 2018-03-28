@@ -1,0 +1,102 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a img {
+	border: none;
+}
+
+body {
+  font-family:Verdana;
+	background:#E5E5E5;
+	text-align:center;
+}	
+
+#tudo {
+	width: 900px;
+	margin: 0 auto;
+	text-align:left;
+	overflow: hidden;
+}
+
+.menu {
+	background:url(imagens/principal05.jpg) no-repeat;
+}
+
+.listaPrincipal {
+	list-style: none; 
+	position:relative;
+	top:-30px;
+}
+.listaPrincipal li { 
+  font-size:17px;
+  font-weight:bold;
+	margin-bottom: 15px;
+	margin-left: 20px;
+}
+
+.listaPrincipal li a {
+  text-decoration:none;
+  color:rgb(215,0,125);
+}
+
+/* trocar a cor quando o mouse passa em cima, a.selecionado p/selecionar automático */
+.listaPrincipal li a:hover,
+.listaPrincipal li a.selecionado {
+  color:white;
+}
+
+.lateral1 {
+	background:url(imagens/lateral.gif) repeat-y;
+	float:right;
+	width:210px;
+	margin-bottom: -99999em;
+	padding-bottom: 99999em;
+}
+
+h1 {
+	color:rgb(215,0,125);
+	font-size:24px;
+}
+
+h2 {
+  color:#808080;
+  font-size:16px;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+h3 {
+  color:rgb(215,0,125);
+  font-size:14px;
+  font-weight:bold;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+p {
+  font-size:12px;
+}
+
+#conteudo {
+	width:680px;
+	padding:30px;
+  background:#FFFFFF
+}
+
+.conteudoAgenda {
+  width:660px;
+}
+
+.conteudoAgenda2 {
+  width:205px;
+  float:left;
+  margin-right:15px;
+}
+
+.conteudoAgenda3 {
+  width:205px
+  float:left;
+  margin-right:15px !important;
+}
